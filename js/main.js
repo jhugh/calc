@@ -61,9 +61,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     };
 
     document.getElementById("clearbutton").onclick = function() {
-        //document.getElementById("finput").value = "";
         iElem.value = "";
-        //document.getElementById("cinput").value = "";
         oElem.value = 0;
     };
 });

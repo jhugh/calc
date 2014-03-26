@@ -42,6 +42,7 @@ var Calculator = (function() {
        // division operation
        divideNumber: function(operand,num) {
             var op = parseInt(operand);
+            try {
             if (isNaN(op) == true) {
                 throw new Error ("Not a number");
             }
@@ -52,6 +53,9 @@ var Calculator = (function() {
                 throw new Error ("Divide by zero Error");
             }            
             return num/op;
+            } catch (err) {
+                alert(err);
+            }
        }
         
     }
