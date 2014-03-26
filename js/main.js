@@ -11,33 +11,8 @@ window._skel_config = {
     }
 };
 
-//jQuery version
-/*
-$(document).ready(function() {
-    $("#convertbutton").click(function() {
-        var cValue = $("#cinput").val();
-        var fValue = $("#finput").val();
 
-
-        if (((cValue.length !=0) && (fValue.length !=0))
-            || ((cValue.length == 0) && fValue.length == 0)) {
-            alert("Please set one field, and only one field")
-        }
-        if (cValue.length != 0) {
-            $("#finput").val(Converter.convertFromCelsToFahr(cValue));
-        }
-        else if (fValue.length != 0) {
-            $("#cinput").val(Converter.convertFromFahrToCels(fValue));
-        }
-    });
-    $("#clearbutton").click(function() {
-        $("#finput").val('');
-        $("#cinput").val('');
-    });
-    
-}); */ 
-
-// non-jQuery version
+// non-jQuery JS functions
 document.addEventListener("DOMContentLoaded", function(event) { 
     var iElem = document.getElementById('ninput');    // get number to add/subtract/multiply/divide
     var oElem = document.getElementById('noutput');   // get number to operated on
@@ -48,15 +23,48 @@ document.addEventListener("DOMContentLoaded", function(event) {
             alert("Please set a number in input field")
         }
         else {
-            //document.getElementById("finput").value = Converter.convertFromCelsToFahr(document.getElementById("cinput").value);
             oElem.value =  Calculator.addNumber(inum,onum);
         }
-    };    
+    };
+
+    document.getElementById('subtractbutton').onclick = function() {
+        var inum = iElem.value; 
+        var onum = oElem.value; 
+        if (inum.length == 0) {
+            alert("Please set a number in input field")
+        }
+        else {
+            oElem.value =  Calculator.subtractNumber(inum,onum);
+        }
+    };
+
+    document.getElementById('multiplybutton').onclick = function() {
+        var inum = iElem.value; 
+        var onum = oElem.value; 
+        if (inum.length == 0) {
+            alert("Please set a number in input field")
+        }
+        else {
+            oElem.value =  Calculator.multiplyNumber(inum,onum);
+        }
+    };
+
+    document.getElementById('dividebutton').onclick = function() {
+        var inum = iElem.value; 
+        var onum = oElem.value; 
+        if (inum.length == 0) {
+            alert("Please set a number in input field")
+        }
+        else {
+            oElem.value =  Calculator.divideNumber(inum,onum);
+        }
+    };
+
     document.getElementById("clearbutton").onclick = function() {
         //document.getElementById("finput").value = "";
-        fElem.value = "";
+        iElem.value = "";
         //document.getElementById("cinput").value = "";
-        cElem.value = "";
+        oElem.value = 0;
     };
 });
 
