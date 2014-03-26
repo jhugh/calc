@@ -11,15 +11,6 @@ window._skel_config = {
     }
 };
 
-var putNum = function(digit) {
-    if (document.getElementById('ninput').value.length == 0 ) {
-        document.getElementById('ninput').value = digit;
-    }
-    else {
-        document.getElementById('ninput').value = parseFloat((document.getElementById('ninput').value * 10).toString() + digit);
-    }
-};
-
 // non-jQuery JS functions
 document.addEventListener("DOMContentLoaded", function(event) { 
     var iElem = document.getElementById('ninput');    // get number to add/subtract/multiply/divide
@@ -76,12 +67,19 @@ document.addEventListener("DOMContentLoaded", function(event) {
     document.getElementById('btn0').onclick = function() {
        putNum('0');
     };
+
+    document.getElementById('btn0').onclick = function() {
+       putNum('0');
+    };
+    
     document.getElementById('btn1').onclick = function() {
        putNum('1');
     };
+
     document.getElementById('btn2').onclick = function() {
        putNum('2');
     };
+
     document.getElementById('btn3').onclick = function() {
        putNum('3');
     };
@@ -105,9 +103,18 @@ document.addEventListener("DOMContentLoaded", function(event) {
     };
     document.getElementById('btndot').onclick = function() {
        putNum('.');
-    };
-
+    };    
+    
 });
+
+var putNum = function(digit) {
+    if (document.getElementById('ninput').value.length == 0 ) {
+        document.getElementById('ninput').value = digit;
+    }
+    else {
+        document.getElementById('ninput').value = parseFloat((document.getElementById('ninput').value * 10).toString() + digit);
+    }
+};
 
     
 
