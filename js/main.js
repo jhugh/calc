@@ -67,10 +67,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
     document.getElementById('btn0').onclick = function() {
        putNum('0');
     };
-
-    document.getElementById('btn0').onclick = function() {
-       putNum('0');
-    };
     
     document.getElementById('btn1').onclick = function() {
        putNum('1');
@@ -112,7 +108,7 @@ var putNum = function(digit) {
         document.getElementById('ninput').value = digit;
     }
     else {
-        document.getElementById('ninput').value = parseFloat((document.getElementById('ninput').value * 10).toString() + digit);
+        document.getElementById('ninput').value = parseFloat(document.getElementById('ninput').value.toString() + digit);
     }
 };
 
