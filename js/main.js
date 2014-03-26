@@ -15,10 +15,10 @@ window._skel_config = {
 // non-jQuery JS functions
 document.addEventListener("DOMContentLoaded", function(event) { 
     var iElem = document.getElementById('ninput');    // get number to add/subtract/multiply/divide
-    var oElem = document.getElementById('noutput');   // get number to operated on
+    var oElem = document.getElementById('noutput');   // get number to be operated on
     document.getElementById('addbutton').onclick = function() {
         var inum = iElem.value; 
-        var onum = oElem.value; 
+        var onum = parseFloat(oElem.value); 
         if (inum.length == 0) {
             alert("Please set a number in input field")
         }
@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     document.getElementById('subtractbutton').onclick = function() {
         var inum = iElem.value; 
-        var onum = oElem.value; 
+        var onum = parseFloat(oElem.value); 
         if (inum.length == 0) {
             alert("Please set a number in input field")
         }
@@ -39,8 +39,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
     };
 
     document.getElementById('multiplybutton').onclick = function() {
-        var inum = iElem.value; 
-        var onum = oElem.value; 
+        var inum = iElem.value;
+        var onum = parseFloat(oElem.value); 
         if (inum.length == 0) {
             alert("Please set a number in input field")
         }
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     document.getElementById('dividebutton').onclick = function() {
         var inum = iElem.value; 
-        var onum = oElem.value; 
+        var onum = parseFloat(oElem.value); 
         if (inum.length == 0) {
             alert("Please set a number in input field")
         }
