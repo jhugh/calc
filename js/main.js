@@ -13,7 +13,7 @@ window._skel_config = {
 
 var putNum = function(digit) {
     if (document.getElementById('ninput').value.length == 0 ) {
-       document.getElementById('ninput').value = digit;
+        document.getElementById('ninput').value = digit;
     }
     else {
         document.getElementById('ninput').value = parseFloat((document.getElementById('ninput').value * 10).toString() + digit);
@@ -107,9 +107,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
        putNum('.');
     };
 
-
-
-    
 });
 
     
