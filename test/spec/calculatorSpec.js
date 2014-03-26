@@ -32,27 +32,27 @@ describe("My Calculator", function() {
 
     //handle range
     it("addition should be able to deal with numbers too large", function () {
-        expect(function () { Calculator.addNumber(2000000000,10) }).toThrow(new Error("Out of Range"));
+        expect(function () { Calculator.addNumber(2000000001,10) }).toThrow(new Error("Out of Range"));
     })
     it("addition should be able to deal with numbers too small", function () {
-        expect(function () { Calculator.addNumber(-2000000000,10) }).toThrow(new Error("Out of Range"));
+        expect(function () { Calculator.addNumber(-2000000001,10) }).toThrow(new Error("Out of Range"));
     })
     it("subtraction should be able to deal with numbers too large", function () {
-        expect(function () { Calculator.subtractNumber(2000000000,10) }).toThrow(new Error("Out of Range"));
+        expect(function () { Calculator.subtractNumber(2000000001,10) }).toThrow(new Error("Out of Range"));
     })
     it("subtraction should be able to deal with numbers too small", function () {
-        expect(function () { Calculator.subtractNumber(-2000000000,10) }).toThrow(new Error("Out of Range"));
+        expect(function () { Calculator.subtractNumber(-2000000001,10) }).toThrow(new Error("Out of Range"));
     })
     it("multiplication should be able to deal with numbers too large", function () {
-        expect(function () { Calculator.multiplyNumber(2000000000,10) }).toThrow(new Error("Out of Range"));
+        expect(function () { Calculator.multiplyNumber(2000000001,10) }).toThrow(new Error("Out of Range"));
     })
     it("multiplication should be able to deal with numbers too small", function () {
-        expect(function () { Calculator.multiplyNumber(-2000000000,10) }).toThrow(new Error("Out of Range"));
+        expect(function () { Calculator.multiplyNumber(-2000000001,10) }).toThrow(new Error("Out of Range"));
     })
     it("division should be able to deal with numbers too large", function () {
-        expect(function () { Calculator.divideNumber(2000000000,10) }).toThrow(new Error("Out of Range"));
+        expect(function () { Calculator.divideNumber(2000000001,10) }).toThrow(new Error("Out of Range"));
     })
     it("division should be able to deal with numbers too small", function () {
-        expect(function () { Calculator.divideNumber(-2000000000,10) }).toThrow(new Error("Out of Range"));
+        expect(function () { Calculator.divideNumber(-2000000001,10) }).toThrow(new Error("Out of Range"));
     })
 })
