@@ -4,8 +4,8 @@ var Calculator = (function() {
     // Public methods here
     return {
        // addition operation
-       addNumber: function(operand,num) {
-            var op = parseInt(operand);
+       addNumber: function(operand,num) {   //operand = number to be added, num = number added to
+            var op = parseFloat(operand);
                 if (isNaN(op) == true) {
                     throw new Error ("Not a number");
                 }
@@ -16,8 +16,8 @@ var Calculator = (function() {
        },
     
        // subtraction operation
-       subtractNumber: function(operand,num) {
-            var op = parseInt(operand);
+       subtractNumber: function(operand,num) {     //operand = number to be subtracted, num = number subtracted from
+            var op = parseFloat(operand);
                 if (isNaN(op) == true) {
                     throw new Error ("Not a number");
                 }
@@ -28,8 +28,8 @@ var Calculator = (function() {
        },
        
        // multiplication operation
-       multiplyNumber: function(operand,num) {
-            var op = parseInt(operand);
+       multiplyNumber: function(operand,num) {    //operand = number to be multiplied by, num = number to be multiplied
+            var op = parseFloat(operand);
                 if (isNaN(op) == true) {
                     throw new Error ("Not a number");
                 }
@@ -40,8 +40,8 @@ var Calculator = (function() {
        },
        
        // division operation
-       divideNumber: function(operand,num) {
-            var op = parseInt(operand);
+       divideNumber: function(operand,num) {     //operand = number to divide by, num = number to be divided
+            var op = parseFloat(operand);
                 if (isNaN(op) == true) {
                     throw new Error ("Not a number");
                 }
